@@ -1,0 +1,64 @@
+img {
+    max-width: 100%;
+}
+
+.comic {
+    text-align: center;
+    padding: 20px;
+}
+    .pagination {
+        margin: 20px auto 20px auto;
+    }
+        .pagination > * {
+            display: inline-block;
+            font-size: 18px;
+            user-select: none;
+        }
+        .pagination > div,
+        .pagination ul li {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            border: 1px solid #000000;
+            font-weight: bold;
+            border-radius: 21px;
+            margin: 0px 5px;
+        }
+        .pagination > div:hover,
+        .pagination ul li:hover {
+            background-color: #005500;
+            color: #ffffff;
+        }
+        .pagination > div {
+            width: 125px;
+            text-transform: uppercase;
+        }
+        .pagination ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+            .pagination ul li {
+                display: inline-block;
+            }
+            .pagination ul li.active {
+                background-color: #005500;
+                color: #ffffff;
+                cursor: default;
+            }
+            
+@media only screen and (max-width: 767px) {
+    .pagination > * {
+        font-size: 14px;
+    }
+        .pagination > div,
+        .pagination ul li {
+            width: 17px;
+            height: 17px;
+            line-height: 17px;
+        }
+        .pagination > * span {
+            display: none;
+        }
+}
