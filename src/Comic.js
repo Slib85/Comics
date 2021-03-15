@@ -85,6 +85,10 @@ class Comic extends React.Component {
             pageNumber = 1;
         }
 
+        this.setState({
+            comicJSON: undefined
+        });
+        
         this.fetchJSON(pageNumber)
     }
 
@@ -102,7 +106,10 @@ class Comic extends React.Component {
 
     render() {
         if (typeof this.state.comicJSON === "undefined") {
-            return (<div className="comic"></div>)
+            return (
+                <div className="comic">
+                    <div>Loading...</div>
+                </div>)
         } else {
             return (
                 <div className="comic">
