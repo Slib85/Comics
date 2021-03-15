@@ -63,7 +63,6 @@ class Comic extends React.Component {
     fetchJSON = (pageNumber) => {
         var fetchUrl = typeof pageNumber === "undefined" ? "https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json" : "https://cors-anywhere.herokuapp.com/https://xkcd.com/" + (this.maxPageNumber - pageNumber + 1) + "/info.0.json"
 
-        console.log(this.state.activePage);
         fetch(fetchUrl)
         .then((response) => response.json())
         .then((result) => {
