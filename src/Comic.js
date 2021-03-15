@@ -109,7 +109,8 @@ class Comic extends React.Component {
             return (
                 <div className="comic">
                     <div>Loading...</div>
-                </div>)
+                </div>
+            )
         } else {
             return (
                 <div className="comic">
